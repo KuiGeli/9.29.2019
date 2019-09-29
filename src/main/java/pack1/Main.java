@@ -1,11 +1,17 @@
 package pack1;
 
 
+import shapes.Shape;
+
 public class Main {
 
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
+
+
+
+
 
         Clss cls1 = new Clss();
         pack2.Clss cls2 = new pack2.Clss(15);
