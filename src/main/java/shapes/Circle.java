@@ -2,8 +2,7 @@ package shapes;
 
 
 
-public class Circle extends Shape{
-
+public class Circle extends Shape implements Colorable{
 
 
 
@@ -19,6 +18,10 @@ public class Circle extends Shape{
 
     }
 
+    @Override
+    public void render() {
+        System.out.println("Circle rendered with color");
+    }
 
     public void fillColor(){
         int color = sh.colorCode;

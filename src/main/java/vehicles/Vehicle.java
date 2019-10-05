@@ -1,8 +1,11 @@
 package vehicles;
 
-public class Vehicle {
+public class Vehicle extends Exception {
 
-    private int maxSpeed;
+
+   protected int currentSpeed;
+
+    protected int maxSpeed;
 
     public Vehicle(int maxSpeed) {
         this.maxSpeed = maxSpeed;
@@ -11,4 +14,20 @@ public class Vehicle {
     public int getMaxSpeed() {
         return maxSpeed;
     }
+
+    public void increaseSpeed(){
+        currentSpeed++;
+        if(currentSpeed > maxSpeed){
+            throw this.new overMaxSpeedException();
+        }
+    }
+
+    public class overMaxSpeedException extends RuntimeException{
+
+
+
+
+    }
+
+
 }
