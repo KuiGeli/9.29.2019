@@ -31,22 +31,22 @@ public class Point extends Shape implements Comparable {
         return yPos;
     }
 
-    @Override
-    public boolean equals(Object other){
-        if(other == this){
-            return true;
-        }
-
-        if(!(other instanceof Point)){
-            return false;
-        }
-
-
-        Point otherPoint = (Point) other;
-        return Double.compare(this.xPos, otherPoint.getXPos()) == 0 &&
-                Double.compare(this.yPos, otherPoint.getYPos()) == 0;
-
-    }
+//    @Override
+//    public boolean equals(Object other){
+//        if(other == this){
+//            return true;
+//        }
+//
+//        if(!(other instanceof Point)){
+//            return false;
+//        }
+//
+//
+//        Point otherPoint = (Point) other;
+//        return Double.compare(this.xPos, otherPoint.getXPos()) == 0 &&
+//                Double.compare(this.yPos, otherPoint.getYPos()) == 0;
+//
+//    }
 
 
     @Override

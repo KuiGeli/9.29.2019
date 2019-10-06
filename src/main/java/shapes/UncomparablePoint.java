@@ -1,6 +1,7 @@
 package shapes;
 
-import java.util.Comparator;
+
+import java.util.Objects;
 
 public class UncomparablePoint {
 
@@ -20,6 +21,36 @@ public class UncomparablePoint {
         return y;
     }
 
+    @Override
+    public String toString() {
+        return "UncomparablePoint{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 
 
+
+    @Override
+    public boolean equals(Object other){
+        if(other == this){
+            return true;
+        }
+
+        if(!(other instanceof UncomparablePoint)){
+            return false;
+        }
+
+
+        UncomparablePoint otherPoint = (UncomparablePoint) other;
+        return Double.compare(this.x, otherPoint.getX()) == 0 &&
+                Double.compare(this.y, otherPoint.getY()) == 0;
+
+    }
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
+    }
 }
