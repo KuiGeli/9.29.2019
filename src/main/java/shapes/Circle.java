@@ -1,7 +1,5 @@
 package shapes;
 
-
-
 public class Circle extends Shape implements Colorable{
 
 
@@ -12,7 +10,7 @@ public class Circle extends Shape implements Colorable{
 
     Shape sh = new Shape();
 
-    public void compuAtearea () {
+    public void computeArea() throws ShapeException {
 
         double area = Math.PI * radius * radius;
 

@@ -18,16 +18,19 @@ public class Vehicle extends Exception {
     public void increaseSpeed(){
         currentSpeed++;
         if(currentSpeed > maxSpeed){
-            throw this.new overMaxSpeedException();
+            throw this.new OverMaxSpeedException("MaxSpeed Exceeded!!!");
         }
     }
 
-    public class overMaxSpeedException extends RuntimeException{
+    public class OverMaxSpeedException extends RuntimeException{
 
-
-
+        public OverMaxSpeedException(String message) {
+            super(message);
+        }
 
     }
 
-
+    public int getCurrentSpeed() {
+        return currentSpeed;
+    }
 }

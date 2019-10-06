@@ -1,5 +1,7 @@
 package shapes;
 
+import java.io.IOException;
+
 public class Shape implements Colorable {
 
     public int colorCode;
@@ -45,6 +47,10 @@ public class Shape implements Colorable {
 
         }
         return new DescriptiveColor();
+    }
+
+    public static class ShapeException extends IOException{
+
     }
 
 
