@@ -1,10 +1,12 @@
 package shapes;
 
-public class Circle extends Shape implements Colorable{
+import java.io.Serializable;
+
+public class Circle extends Shape implements Colorable, Serializable {
 
 
 
-    private Point center;
+    private transient Point center;
 
     private float radius;
 
@@ -26,8 +28,18 @@ public class Circle extends Shape implements Colorable{
 
     }
 
-    public Circle(float radius, Point center) {
+    public Circle(float radius) {
         this.radius = radius;
-        this.center = center;
+        System.out.println("aaaa");
+
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "center=" + center +
+                ", radius=" + radius +
+                ", sh=" + sh +
+                '}';
     }
 }

@@ -33,4 +33,11 @@ public class Vehicle extends Exception {
     public int getCurrentSpeed() {
         return currentSpeed;
     }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "maxSpeed=" + maxSpeed +
+                '}';
+    }
 }

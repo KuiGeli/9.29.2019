@@ -5,17 +5,27 @@ public class Car extends Vehicle {
 
     private int maxSpeed;
 
-    public Car(int maxSpeed, boolean isConvertible) {
+    public Car(int maxSpeed) {
         super(maxSpeed);
-        this.isConvertible = isConvertible;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Car{" +
+                "maxSpeed=" + maxSpeed +
+                '}';
+    }
 
     public boolean isConvertible() {
         return isConvertible;
     }
 
+    @Override
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
 
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
 }
