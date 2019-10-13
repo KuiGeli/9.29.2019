@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import vehicles.*;
 
 import java.util.List;
+import java.util.function.Function;
 
 public class Utils {
 
@@ -13,11 +14,19 @@ public class Utils {
     }
 
 
+    static Integer useFunction (Function<String, Integer> integerParser, String input){
+        return integerParser.apply(input);
+    }
+
+
+
 
     public static void main(String[] args) {
 
 
-        System.out.println(mapBasedOnDescription("double clutch", GearboxTypes.class));
+        System.out.println(useFunction(Integer::parseInt, "9"));
+
+//        System.out.println(mapBasedOnDescription("double clutch", GearboxTypes.class));
 
 
 //        List<Vehicle> vehicles = ImmutableList.<Vehicle>builder()
@@ -41,11 +50,10 @@ public class Utils {
 //        System.out.println(fastestVehicle(cars));
 
 
-
     }
 
 
-    static <E extends Enum<E> & VehicleSpecifics> E mapBasedOnDescription (String description, Class<E> clazz){
+    public static <E extends Enum<E> & VehicleSpecifics> E mapBasedOnDescription (String description, Class<E> clazz){
         for(E type : clazz.getEnumConstants()){
             if(type.getDescription().equalsIgnoreCase(description)){
                 return type;
@@ -100,5 +108,11 @@ public class Utils {
         return fastestVehicle;
 
     }
+
+
+
+
+
+
 
 }
